@@ -25,7 +25,7 @@ set -o pipefail
 echo "Print list of S3 buckets"
 aws s3 ls
 
-# list of EC2 instances
+# list of EC2 instances and extracting their IDs
 echo "Print list of EC2 instances"
 aws ec2 describe-instances | jq '.Reservations[].Instances[].InstanceId'
 
